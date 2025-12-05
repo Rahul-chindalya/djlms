@@ -26,13 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bath',
+    'batch',
     'course',
     'learner',
     'notification',
     'payment',
     'users',
-    'trainer',
     'rest_framework',
 ]
 
@@ -76,6 +75,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+#models 
+AUTH_USER_MODEL = 'users.User'
 
 
 # Password validation
