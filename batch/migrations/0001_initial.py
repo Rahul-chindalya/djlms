@@ -9,10 +9,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ('course', '0002_course_trainer'),
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-    ]
+    dependencies = [   ]
 
     operations = [
         migrations.CreateModel(

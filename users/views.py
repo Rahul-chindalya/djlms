@@ -16,8 +16,8 @@ class signupuser(CreateAPIView):
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
 
-def userdata(request):
-    user = User.objects.get(id=1)
+def userdata(request,id):
+    user = User.objects.get(id=id)
     serializer = UserSerializer(user)
     jsonData = JSONRenderer().render(serializer.data)
     return HttpResponse(jsonData,content_type='application/json')
