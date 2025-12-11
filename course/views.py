@@ -2,7 +2,6 @@ from django.shortcuts import render,get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
 from .models import Course
 from .serializers import CourseSerializer
 
@@ -14,10 +13,10 @@ def is_admin(user):
 
 
 class CourseList(APIView):
-    """
-    GET  /course/courselist/        -> list all courses
-    POST /course/courselist/        -> create course (ADMIN only)
-    """
+    ####
+    #GET  /course/courselist/        -> list all courses
+    #POST /course/courselist/        -> create course (ADMIN only)
+    ####
 
     def get(self, request):
         courses = Course.objects.all()

@@ -11,7 +11,7 @@ class Batch(models.Model):
         on_delete= models.SET_NULL,
         null = True,
         limit_choices_to ={'role':'TRAINER'},
-        related_name='batches',
+        related_name='trainer',
     )
     learner = models.ManyToManyField(
         settings.AUTH_USER_MODEL,

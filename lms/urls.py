@@ -13,4 +13,5 @@ urlpatterns = [
     path('',index,name='index'),
     path('users/',include('users.urls',namespace='one')),
     path('course/',include('course.urls',namespace='course')),
+    path('batch/',include('batch.urls',namespace='batches')),
 ]
