@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
+# from django.contrib.auth import get_user_model
 from .models import User
 from django.contrib.auth import authenticate
  
@@ -15,13 +15,14 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self,validate_data):
         user = User.objects.create_user(**validated_data)
         return user
-
+##  its converts plain password in ##hash code to secure data
     def create(self,validated_data):
         password = validated_data.pop('password')
         user = User(**validated_data)
         user.set_password(password)
         user.save()
         return user
+######################################################
 
 class loginSerializer(serializers.Serializer):
     username =  serializers.CharField()

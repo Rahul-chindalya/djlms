@@ -11,7 +11,7 @@ class Course(models.Model):
         limit_choices_to={'role':"TRAINER"},
         related_name = 'TRAINER',
     )
-    createdd_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at =  models.DateTimeField(auto_now=True)
 
 
