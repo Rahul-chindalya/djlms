@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import LearnerProfileView
+from .views import LearnerProfile
 
 app_name = 'learner'
 

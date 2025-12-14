@@ -3,6 +3,8 @@ from .models import LearnerProfile
 from django.contrib.auth import get_user_model
 from course.serializers import CourseSerializer
 from batch.serializers import BatchSerializer
+from course.models import Course        
+from batch.models import Batch  
 
 User = get_user_model()
 

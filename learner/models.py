@@ -11,10 +11,10 @@ class LearnerProfile(models.Model):
         on_delete = models.CASCADE,
         related_name='learner_profile'
     )
-    phone = models.CharField(max_length=20 , blank = True  ,null = true)
-    dob = models.DateField(blank = True  ,null = true)
-    enrolled_courses = models.ManyToManyField(Course,blank = True  ,null = true,related_name='learner')
-    bio = models.TextField(blank = True  ,null = true)
+    phone = models.CharField(max_length=20 , blank = True  ,null = True)
+    dob = models.DateField(blank = True  ,null = True)
+    enrolled_courses = models.ManyToManyField(Course,blank = True  ,null = True,related_name='learner')
+    bio = models.TextField(blank = True  ,null = True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
