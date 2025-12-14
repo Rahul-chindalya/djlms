@@ -14,5 +14,5 @@ urlpatterns = [
     path('users/',include('users.urls',namespace='one')),
     path('course/',include('course.urls',namespace='course')),
     path('batch/',include('batch.urls',namespace='batches')),
-    path('learner/',include('learner.urls',namespace='learner')),
+    #path('learner/',include('learner.urls',namespace='learner')),
 ]

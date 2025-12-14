@@ -12,9 +12,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields =['username','email','password','role']
 
-    def create(self,validate_data):
-        user = User.objects.create_user(**validated_data)
-        return user
 ##  its converts plain password in ##hash code to secure data
     def create(self,validated_data):
         password = validated_data.pop('password')
